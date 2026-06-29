@@ -1,0 +1,49 @@
+/* Hand-written CSS. Loaded AFTER Bootstrap so these rules can override it. */
+
+/* ─── Sticky footer via Flexbox column ───────────────────────────────────────
+   The body becomes a full-viewport column flex container.
+   <main> takes flex: 1 so it stretches to fill whatever height is left over
+   after the navbar and footer claim their natural sizes.
+   The footer never shrinks — it always sits at the bottom of the viewport,
+   even when the page content is shorter than the screen height.
+   On tall pages the footer simply follows the content; no content is obscured.
+   ─────────────────────────────────────────────────────────────────────────── */
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+/* ─── Navbar overrides ───────────────────────────────────────────────────── */
+.navbar-brand {
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+/* ─── Site footer ────────────────────────────────────────────────────────── */
+.site-footer {
+  flex-shrink: 0;
+  background-color: #212529;
+  color: #adb5bd;
+  border-top: 1px solid #343a40;
+  font-size: 0.9rem;
+}
+
+.site-footer a {
+  color: #adb5bd;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.site-footer a:hover,
+.site-footer a:focus {
+  color: #ffffff;
+}
+
+.site-footer address {
+  font-style: normal;
+}
