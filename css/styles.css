@@ -82,3 +82,94 @@ main a:hover,
 main a:focus {
   color: var(--cb-espresso);
 }
+
+/* ─── Browse page — filter bar ───────────────────────────────────────────── */
+.filter-bar {
+  background-color: var(--cb-latte);
+  border: 1px solid var(--cb-espresso-rim);
+}
+
+.filter-bar .form-label {
+  color: var(--cb-espresso);
+  font-weight: 600;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.filter-group {
+  min-width: 9rem;
+}
+
+/* ─── Drink cards ────────────────────────────────────────────────────────── */
+.drink-card .card-header {
+  background-color: var(--cb-latte);
+  border-bottom: 1px solid var(--cb-espresso-rim);
+}
+
+.drink-card .card-title {
+  color: var(--cb-mocha);
+}
+
+/* Attribute definition list inside card body */
+.drink-attrs {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.15rem 0.75rem;
+  font-size: 0.875rem;
+  margin-bottom: 0;
+}
+
+.drink-attrs dt {
+  color: var(--cb-mocha);
+  font-weight: 600;
+}
+
+.drink-attrs dd {
+  margin-bottom: 0;
+}
+
+/* ─── Drink badges ───────────────────────────────────────────────────────── */
+.drink-badge--temp {
+  background-color: var(--cb-espresso);
+  color: var(--cb-cream);
+}
+
+.drink-badge--strength {
+  background-color: var(--cb-espresso-rim);
+  color: var(--cb-cream);
+}
+
+/* ─── How-to-make button ─────────────────────────────────────────────────── */
+.drink-card__method-btn {
+  border-color: var(--cb-mocha);
+  color: var(--cb-mocha);
+}
+
+.drink-card__method-btn:hover,
+.drink-card__method-btn:focus {
+  background-color: var(--cb-mocha);
+  color: var(--cb-cream);
+}
+
+/* ─── Method steps ───────────────────────────────────────────────────────── */
+.method-steps {
+  font-size: 0.875rem;
+  padding-left: 1.25rem;
+}
+
+.method-steps li + li {
+  margin-top: 0.25rem;
+}
+
+/* ─── Result count ───────────────────────────────────────────────────────── */
+.result-count {
+  font-size: 0.875rem;
+  color: var(--cb-mocha);
+}
+
+/* ─── Empty state ────────────────────────────────────────────────────────── */
+.empty-state__icon {
+  font-size: 3rem;
+  color: var(--cb-caramel);
+}

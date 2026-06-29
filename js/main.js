@@ -1,2 +1,8 @@
-// Entry point (ES6 module). You'll import your classes here as you build them.
-console.log("Counter Brew is running.");
+import { drinks }    from '../data/drinks.js';
+import { DrinkList } from './DrinkList.js';
+
+// Browse page — only runs when #drink-grid exists
+const grid = document.getElementById('drink-grid');
+if (grid) {
+  new DrinkList(grid, drinks).init();
+}
