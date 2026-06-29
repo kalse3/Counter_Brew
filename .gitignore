@@ -1,0 +1,10 @@
+# OS / editor junk
+.DS_Store
+Thumbs.db
+.vscode/
+
+# Your real API key lives here — never commit it
+js/config.js
+
+# Only if you add tooling later
+node_modules/
