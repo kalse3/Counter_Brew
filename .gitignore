@@ -8,3 +8,5 @@ js/config.js
 
 # Only if you add tooling later
 node_modules/
+
+course-reference/
