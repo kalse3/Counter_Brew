@@ -37,10 +37,78 @@
     </div>
   </nav>
 
-  <main class="container py-5">
-    <h1>Counter Brew</h1>
-    <p>Café drinks you can make on your kitchen counter — no espresso machine.</p>
-    <p>Setup works. Real content coming soon.</p>
+  <main>
+
+    <!-- ── Hero ─────────────────────────────────────────────────────────── -->
+    <section class="hero text-center">
+      <div class="container">
+        <h1 class="hero__title">Counter Brew</h1>
+        <p class="hero__tagline">Café drinks you can make on your kitchen counter — no espresso machine.</p>
+        <p class="hero__intro">Cheap tools. Café quality. No machine required.</p>
+        <div class="d-flex flex-wrap justify-content-center gap-3 mt-4">
+          <a href="drinks.html" class="btn hero__cta-primary">
+            <i class="bi bi-cup-hot me-1"></i> Browse the drinks
+          </a>
+          <a href="explore.html" class="btn hero__cta-secondary">
+            <i class="bi bi-search me-1"></i> Explore recipes
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Two ways to explore ───────────────────────────────────────────── -->
+    <section class="site-section">
+      <div class="container">
+        <h2 class="mb-4">Two ways to explore</h2>
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+
+          <div class="col">
+            <div class="card what-is-card h-100">
+              <div class="card-header text-center py-3">
+                <i class="bi bi-cup-hot what-is-icon"></i>
+              </div>
+              <div class="card-body">
+                <h3 class="h5 card-title">Make it at home</h3>
+                <p class="card-text">A curated collection of café-style drinks you can make without an espresso machine — using a moka pot, AeroPress, French press, or a handheld milk frother. Each entry includes equipment, method, and tasting notes.</p>
+              </div>
+              <div class="card-footer bg-transparent border-0 pb-3">
+                <a href="drinks.html" class="btn btn-sm home-featured-btn w-100">Browse the drinks</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card what-is-card h-100">
+              <div class="card-header text-center py-3">
+                <i class="bi bi-search what-is-icon"></i>
+              </div>
+              <div class="card-body">
+                <h3 class="h5 card-title">The wider world of coffee cooking</h3>
+                <p class="card-text">Search the Spoonacular database for coffee-flavoured recipes and desserts — bakes, sweets, and treats built around coffee. Browse is for drinks; Explore is for the kitchen.</p>
+              </div>
+              <div class="card-footer bg-transparent border-0 pb-3">
+                <a href="explore.html" class="btn btn-sm home-featured-btn w-100">Explore recipes</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Featured drinks ───────────────────────────────────────────────── -->
+    <section class="site-section bg-latte-section">
+      <div class="container">
+        <h2 class="mb-4">A few favourites</h2>
+        <div id="home-featured" class="row row-cols-1 row-cols-md-3 g-4">
+          <!-- rendered by main.js -->
+        </div>
+        <div class="text-center mt-4">
+          <a href="drinks.html" class="btn hero__cta-secondary">See all drinks</a>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <footer class="site-footer">
