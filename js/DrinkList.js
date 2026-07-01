@@ -44,14 +44,14 @@ export class DrinkList {
     });
   }
 
-  #renderCard(drink) {
+  #renderCard(drink, index = 0) {
     const tempIcon  = drink.temp === 'hot' ? 'bi-fire' : 'bi-snow';
     const tempLabel = drink.temp === 'hot' ? 'Hot' : 'Iced';
     const strengthLabel = drink.strength.charAt(0).toUpperCase() + drink.strength.slice(1) + ' brew';
     const steps = drink.method.map(s => `<li>${s}</li>`).join('');
 
     return `
-      <div class="col">
+      <div class="col drink-card-enter" style="animation-delay:${index * 35}ms">
         <div class="card drink-card h-100">
           <div class="card-header d-flex flex-wrap gap-2 align-items-center">
             <span class="badge drink-badge--temp">
@@ -89,11 +89,14 @@ export class DrinkList {
   #render() {
     const filtered = this.#applyFilters();
 
+    this.#countEl.classList.remove('result-count--flash');
+    void this.#countEl.offsetWidth; // force reflow so removing + re-adding the class re-triggers the animation
     this.#countEl.textContent = `Showing ${filtered.length} of ${this.#drinks.length} drinks`;
+    this.#countEl.classList.add('result-count--flash');
 
     if (filtered.length === 0) {
       this.#container.innerHTML = `
-        <div class="col-12">
+        <div class="col-12 drink-card-enter">
           <div class="empty-state text-center py-5">
             <i class="bi bi-cup-hot empty-state__icon d-block mb-3"></i>
             <p class="lead mb-1">No drinks match your filters.</p>
@@ -103,6 +106,6 @@ export class DrinkList {
       return;
     }
 
-    this.#container.innerHTML = filtered.map(d => this.#renderCard(d)).join('');
+    this.#container.innerHTML = filtered.map((d, i) => this.#renderCard(d, i)).join('');
   }
 }
