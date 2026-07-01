@@ -47,7 +47,7 @@ export class DrinkList {
   #renderCard(drink) {
     const tempIcon  = drink.temp === 'hot' ? 'bi-fire' : 'bi-snow';
     const tempLabel = drink.temp === 'hot' ? 'Hot' : 'Iced';
-    const strengthLabel = drink.strength.charAt(0).toUpperCase() + drink.strength.slice(1) + ' strength';
+    const strengthLabel = drink.strength.charAt(0).toUpperCase() + drink.strength.slice(1) + ' brew';
     const steps = drink.method.map(s => `<li>${s}</li>`).join('');
 
     return `

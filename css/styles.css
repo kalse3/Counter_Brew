@@ -40,6 +40,31 @@ main {
   letter-spacing: 0.03em;
 }
 
+/* Nav links — one step larger than Bootstrap's default 1rem, semibold weight,
+   and extra horizontal breathing room so three links balance a tall logo. */
+.navbar-nav .nav-link {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--cb-cream);
+  padding-left: 1rem;
+  padding-right: 1rem;
+  transition: color 0.15s ease;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus {
+  color: var(--cb-caramel);
+}
+
+/* Active page: full weight + caramel underline so it stays distinct from hover. */
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link[aria-current="page"] {
+  font-weight: 700;
+  color: var(--cb-cream);
+  border-bottom: 2px solid var(--cb-caramel);
+  padding-bottom: calc(0.5rem - 2px); /* offset the added border so height stays the same */
+}
+
 /* Bootstrap applies !important on .bg-dark, so we must match it to override. */
 .navbar.bg-dark {
   background-color: var(--cb-espresso) !important;
@@ -233,6 +258,16 @@ main a:focus {
 }
 
 /* ─── Drink cards ────────────────────────────────────────────────────────── */
+.drink-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.drink-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(var(--cb-espresso-rgb), 0.18);
+  border-color: var(--cb-caramel);
+}
+
 .drink-card .card-header {
   background-color: var(--cb-latte);
   border-bottom: 1px solid var(--cb-espresso-rim);
@@ -352,6 +387,16 @@ main a:focus {
 }
 
 /* ─── Explore page — recipe cards ────────────────────────────────────────── */
+.explore-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.explore-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(var(--cb-espresso-rgb), 0.18);
+  border-color: var(--cb-caramel);
+}
+
 .explore-card__img {
   height: 180px;
   object-fit: cover;
